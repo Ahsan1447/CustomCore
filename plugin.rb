@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# name: salla_serializers
+# name: custom_core
 # about: Add Salla serializers
 # version: 1.0
 # authors: Ahsan Afzal
