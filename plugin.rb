@@ -36,4 +36,7 @@ after_initialize do
 
   require_relative "lib/salla_serializers/auth_cookie_patch"
   ::Auth::DefaultCurrentUserProvider.prepend SallaSerializers::AuthCookiePatch
+
+  require_relative "lib/salla_serializers/email_template_patch"
+  Email::Renderer.singleton_class.prepend(SallaSerializers::EmailTemplatePatch)
 end
