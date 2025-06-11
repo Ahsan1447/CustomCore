@@ -1,7 +1,7 @@
 module CustomCore
   class PublicUsersController < ::ApplicationController
-    skip_before_action :check_xhr
-    skip_before_action :ensure_logged_in
+    ##skip_before_action :check_xhr
+    #skip_before_action :ensure_logged_in
   
     def index
       Rails.logger.info("#############################PublicUsersController#Index#################")
