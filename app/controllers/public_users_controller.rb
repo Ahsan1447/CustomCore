@@ -1,7 +1,12 @@
-module ::CustomCore
+# frozen_string_literal: true
+
+module SallaSerializers
   class PublicUsersController < ::ApplicationController
-    skip_before_action :check_xhr
-    skip_before_action :ensure_logged_in
+    requires_login false
+    skip_before_action :check_xhr,
+                      :verify_authenticity_token,
+                      :redirect_to_login_if_required,
+                      only: [:index]
   
     def index
       Rails.logger.info("#############################PublicUsersController#Index#################")
